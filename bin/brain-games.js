@@ -1,1 +1,1 @@
-console.log("Welcome to the Brane Games!")
+console.log("Welcome to the Brain Games!")
