@@ -1,1 +1,2 @@
-console.log('Welcome to the Brain Games!')
+import { getGreeting } from '../src/cli.js';
+console.log(getGreeting);
