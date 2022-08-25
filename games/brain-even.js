@@ -1,5 +1,5 @@
 import makeGame from '../src/index.js';
-import getRandomNum from '../src/utilities.js';
+import getRandomNum from '../src/randomnum.js';
 
 const brainEven = () => {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -7,9 +7,9 @@ const brainEven = () => {
   for (let i = 0; i < 6; i += 2) {
     const getQuestion = getRandomNum(10);
     const isEven = (getQuestion % 2);
-    const wrightAnswer = (isEven === 0) ? 'yes' : 'no';
+    const getWrightAnswer = (isEven === 0) ? 'yes' : 'no';
     getQuestionAndAnswer.push(getQuestion);
-    getQuestionAndAnswer.push(wrightAnswer);
+    getQuestionAndAnswer.push(getWrightAnswer);
   }
   makeGame(gameRules, getQuestionAndAnswer);
 };
