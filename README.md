@@ -6,3 +6,5 @@
 Brain game "Even" video: https://asciinema.org/a/516431
 
 Brain game "Calc" video: https://asciinema.org/a/517145
+
+Brain game "GCD" video: https://asciinema.org/a/517583
