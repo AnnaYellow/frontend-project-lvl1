@@ -3,10 +3,10 @@
 
 <a href="https://codeclimate.com/github/AnnaYellow/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/16e0fff382180952591d/maintainability" /></a>
 
-Brain game "Even" video: https://asciinema.org/a/516431
+Brain game "Even" video: <a href="https://asciinema.org/a/516431" target="_blank"><img src="https://asciinema.org/a/516431.svg" /></a>
 
-Brain game "Calc" video: https://asciinema.org/a/517145
+Brain game "Calculator" video: <a href="https://asciinema.org/a/517145" target="_blank"><img src="https://asciinema.org/a/517145.svg" /></a>
 
-Brain game "GCD" video: https://asciinema.org/a/517583
+Brain game "Greatest Common Devisor" video: <a href="https://asciinema.org/a/517583" target="_blank"><img src="https://asciinema.org/a/517583.svg" /></a>
 
-Brain game "Progression" video: [![asciicast](https://asciinema.org/a/517804.svg)](https://asciinema.org/a/517804)
+Brain game "Progression" video: <a href="https://asciinema.org/a/517804" target="_blank"><img src="https://asciinema.org/a/517804.svg" /></a>
