@@ -8,3 +8,5 @@ Brain game "Even" video: https://asciinema.org/a/516431
 Brain game "Calc" video: https://asciinema.org/a/517145
 
 Brain game "GCD" video: https://asciinema.org/a/517583
+
+Brain game "Progression" video: <a href="https://asciinema.org/a/517804" target="_blank"><img src="https://asciinema.org/a/517804.svg" /></a>

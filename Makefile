@@ -20,4 +20,4 @@ brain-gcd:
 	node bin/brain-gcd.js
 
 brain-progression:
-	node bin/brain-gcd.js
+	node bin/brain-progression.js
