@@ -3,6 +3,14 @@
 
 <a href="https://codeclimate.com/github/AnnaYellow/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/16e0fff382180952591d/maintainability" /></a>
 
+Hexlet frontend development studies.
+Educational project of the first stage.
+Student - Anna Zakharova @AnnaYellow.
+
+"Brain Games".
+
+To win any of Brain Games you need to provide three correct answers. Even one wrond answer will end the game.
+
 Brain game "Even" video: <a href="https://asciinema.org/a/516431" target="_blank"><img src="https://asciinema.org/a/516431.svg" /></a>
 
 Brain game "Calculator" video: <a href="https://asciinema.org/a/517145" target="_blank"><img src="https://asciinema.org/a/517145.svg" /></a>
