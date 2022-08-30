@@ -9,7 +9,9 @@ Student - Anna Zakharova @AnnaYellow.
 
 "Brain Games".
 
-To win any of Brain Games you need to provide three correct answers. Even one wrong answer will end the game.
+This package consists of five Brain Games. To win any of the games you need to provide three correct answers. Even one wrong answer will end the game.
+
+To install this package, clone the repository and do the 'make install' command in your terminal. You can call any game by it's name in a command line: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime.
 
 Brain game "Even" video: <a href="https://asciinema.org/a/516431" target="_blank"><img src="https://asciinema.org/a/516431.svg" /></a>
 
