@@ -9,8 +9,8 @@ const brainProgression = () => {
     const getProgression = getRandomArithmProgression(10);
     const getMissingNumberIndex = getRandomNum(getProgression.length - 1);
     const getWrightAnswer = String(getProgression[getMissingNumberIndex]);
-    const getQuestion = getProgression;
-    getQuestion[getMissingNumberIndex] = '..';
+    getProgression[getMissingNumberIndex] = '..';
+    const getQuestion = getProgression.join(' ');
     getQuestionAndAnswer.push(getQuestion);
     getQuestionAndAnswer.push(getWrightAnswer);
   }
