@@ -19,12 +19,12 @@
 
 <p>node 17.9.0
 
-Brain game "Even" video: <a href="https://asciinema.org/a/516431" target="_blank"><img src="https://asciinema.org/a/516431.svg" /></a>
+<h2>Brain game "Even" video:</h2> <a href="https://asciinema.org/a/516431" target="_blank"><img src="https://asciinema.org/a/516431.svg" /></a>
 
-Brain game "Calculator" video: <a href="https://asciinema.org/a/517145" target="_blank"><img src="https://asciinema.org/a/517145.svg" /></a>
+<h2>Brain game "Calculator" video:</h2> <a href="https://asciinema.org/a/517145" target="_blank"><img src="https://asciinema.org/a/517145.svg" /></a>
 
-Brain game "Greatest Common Devisor" video: <a href="https://asciinema.org/a/517583" target="_blank"><img src="https://asciinema.org/a/517583.svg" /></a>
+<h2>Brain game "Greatest Common Devisor" video:</h2> <a href="https://asciinema.org/a/517583" target="_blank"><img src="https://asciinema.org/a/517583.svg" /></a>
 
-Brain game "Progression" video: <a href="https://asciinema.org/a/517804" target="_blank"><img src="https://asciinema.org/a/517804.svg" /></a>
+<h2>Brain game "Progression" video:</h2> <a href="https://asciinema.org/a/517804" target="_blank"><img src="https://asciinema.org/a/517804.svg" /></a>
 
-Brain game "Prime" video: <a href="https://asciinema.org/a/517912" target="_blank"><img src="https://asciinema.org/a/517912.svg" /></a>
+<h2>Brain game "Prime" video:</h2> <a href="https://asciinema.org/a/517912" target="_blank"><img src="https://asciinema.org/a/517912.svg" /></a>
