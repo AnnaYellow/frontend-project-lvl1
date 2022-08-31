@@ -1,25 +1,24 @@
 import readlineSync from 'readline-sync';
+import numberOfGameRounds from './numberOfGameRounds.js';
 
-const makeGame = (gameRules, getQuestionAndAnswer) => {
+const makeGame = (description, rounds) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(gameRules);
-  let counter = 0;
-  let i = 0;
-  while (counter < 3) {
-    console.log(`Question: ${getQuestionAndAnswer[i]}`);
-    const getAnswer = readlineSync.question('Your answer: ');
-    if (getAnswer !== getQuestionAndAnswer[i + 1]) {
-      console.log(`'${getAnswer}' is wrong answer ;(. Correct answer was '${getQuestionAndAnswer[i + 1]}'.\nLet's try again, ${userName}!`);
-      break;
-    } else {
-      console.log('Correct!');
-      counter += 1;
-      i += 2;
-    }
-    if (counter === 3) {
+  console.log(description);
+  for (let i = 0; i <= numberOfGameRounds; i += 1) {
+    if (i === numberOfGameRounds) {
       console.log(`Congratulations, ${userName}!`);
+      break;
+    }
+    console.log(`Question: ${rounds[i][0]}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === rounds[i][1]) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rounds[i][1]}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      break;
     }
   }
 };
