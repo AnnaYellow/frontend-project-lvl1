@@ -1,6 +1,5 @@
 import makeGame from '../index.js';
-import getRandomNumber from '../utils.js';
-import numberOfGameRounds from '../numberOfGameRounds.js';
+import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
 
 const getRandomArithmeticProgression = (lengthFrom, lengthTo) => {
   const progressionLenth = getRandomNumber(lengthFrom, lengthTo);
@@ -19,15 +18,12 @@ const startGame = () => {
   const description = 'What number is missing in the progression?';
   const rounds = [];
   for (let i = 0; i < numberOfGameRounds; i += 1) {
-    const round = [];
     const progression = getRandomArithmeticProgression(5, 10);
     const missingNumberIndex = getRandomNumber(0, progression.length - 1);
     const wrightAnswer = String(progression[missingNumberIndex]);
     progression[missingNumberIndex] = '..';
     const question = progression.join(' ');
-    round.push(question);
-    round.push(wrightAnswer);
-    rounds.push(round);
+    makeRoundsArray(rounds, question, wrightAnswer);
   }
   makeGame(description, rounds);
 };

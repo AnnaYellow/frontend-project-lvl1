@@ -1,6 +1,5 @@
 import makeGame from '../index.js';
-import getRandomNumber from '../utils.js';
-import numberOfGameRounds from '../numberOfGameRounds.js';
+import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
 
 const getCalculation = (firstNumber, actor, secondNumber) => {
   switch (actor) {
@@ -22,13 +21,10 @@ const startGame = () => {
   for (let i = 0; i < numberOfGameRounds; i += 1) {
     const firstNumber = getRandomNumber(0, 10);
     const secondNumber = getRandomNumber(0, 10);
-    const round = [];
     const actor = getRandomArgument(['+', '-', '*']);
     const question = `${firstNumber} ${actor} ${secondNumber}`;
     const wrightAnswer = String(getCalculation(firstNumber, actor, secondNumber));
-    round.push(question);
-    round.push(wrightAnswer);
-    rounds.push(round);
+    makeRoundsArray(rounds, question, wrightAnswer);
   }
   makeGame(description, rounds);
 };

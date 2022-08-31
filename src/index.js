@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import numberOfGameRounds from './numberOfGameRounds.js';
+import { numberOfGameRounds } from './utils.js';
 
 const makeGame = (description, rounds) => {
   console.log('Welcome to the Brain Games!');
