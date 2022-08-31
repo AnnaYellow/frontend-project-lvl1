@@ -3,11 +3,11 @@
 
 <a href="https://codeclimate.com/github/AnnaYellow/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/16e0fff382180952591d/maintainability" /></a>
 
-<h1>Hexlet frontend development studies.</h1>
-<h2>Educational project of the first stage.</h2>
-<h2>Student - Anna Zakharova @AnnaYellow.</h2>
+<p>Hexlet frontend development studies.</p>
+<p>Educational project of the first stage.</p>
+<p>Student - Anna Zakharova @AnnaYellow.</p>
 
-<h1>"Brain Games".</h1>
+<h2>"Brain Games"</h2>
 
 <p>This package consists of five Brain Games. To win any of the games you need to provide three correct answers. Even one wrong answer will end the game.</p>
 
