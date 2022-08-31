@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/AnnaYellow/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AnnaYellow/frontend-project-lvl1/actions)",
+  "description": "Brain Games. This package consists of five Brain Games. To win any of the games you need to provide three correct answers. Even one wrong answer will end the game. [![Actions Status](https://github.com/AnnaYellow/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AnnaYellow/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
   "scripts": {

@@ -7,7 +7,7 @@
 <p>Educational project of the first stage.</p>
 <p>Student - Anna Zakharova @AnnaYellow.</p>
 
-<h2>"Brain Games"</h2>
+<h2>Brain Games</h2>
 
 <p>This package consists of five Brain Games. To win any of the games you need to provide three correct answers. Even one wrong answer will end the game.</p>
 
