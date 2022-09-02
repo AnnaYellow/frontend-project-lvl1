@@ -5,13 +5,13 @@ import numberOfGameRounds from '../constants.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (number1, number2) => {
-  if (number1 === number2) {
-    return number1;
-  }
   if (number1 > number2) {
     return getGCD(number2, number1 - number2);
   }
-  return getGCD(number1, number2 - number1);
+  if (number1 < number2) {
+    return getGCD(number1, number2 - number1);
+  }
+  return number1;
 };
 
 const startGame = () => {
