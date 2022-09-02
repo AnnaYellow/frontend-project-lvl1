@@ -1,5 +1,8 @@
-import makeGame from '../index.js';
-import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
+import runEngine from '../index.js';
+import getRandomNumber from '../utils.js';
+import numberOfGameRounds from '../constants.js';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -14,13 +17,12 @@ const isPrime = (number) => {
 };
 
 const startGame = () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const rounds = [];
   for (let i = 0; i < numberOfGameRounds; i += 1) {
     const question = getRandomNumber(0, 100);
-    const wrightAnswer = isPrime(question) ? 'yes' : 'no';
-    makeRoundsArray(rounds, question, wrightAnswer);
+    const answer = isPrime(question) ? 'yes' : 'no';
+    rounds.push([question, answer]);
   }
-  makeGame(description, rounds);
+  runEngine(description, rounds);
 };
 export default startGame;

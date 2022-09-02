@@ -1,31 +1,34 @@
-import makeGame from '../index.js';
-import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
+import runEngine from '../index.js';
+import getRandomNumber from '../utils.js';
+import numberOfGameRounds from '../constants.js';
 
-const getCalculation = (firstNumber, actor, secondNumber) => {
-  switch (actor) {
+const description = 'What is the result of the expression?';
+
+const calculate = (number1, operator, number2) => {
+  switch (operator) {
     case '+':
-      return firstNumber + secondNumber;
+      return number1 + number2;
     case '-':
-      return firstNumber - secondNumber;
+      return number1 - number2;
     case '*':
-      return firstNumber * secondNumber;
+      return number1 * number2;
     default:
-      throw new Error(`Unknown actor: '${actor}'!`);
+      throw new Error(`Unknown actor: '${operator}'!`);
   }
 };
 
 const startGame = () => {
-  const description = 'What is the result of the expression?';
-  const getRandomArgument = (array) => array[getRandomNumber(0, array.length - 1)];
   const rounds = [];
   for (let i = 0; i < numberOfGameRounds; i += 1) {
-    const firstNumber = getRandomNumber(0, 10);
-    const secondNumber = getRandomNumber(0, 10);
-    const actor = getRandomArgument(['+', '-', '*']);
-    const question = `${firstNumber} ${actor} ${secondNumber}`;
-    const wrightAnswer = String(getCalculation(firstNumber, actor, secondNumber));
-    makeRoundsArray(rounds, question, wrightAnswer);
+    const number1 = getRandomNumber(0, 10);
+    const number2 = getRandomNumber(0, 10);
+    const operators = ['+', '-', '*'];
+    const index = getRandomNumber(0, operators.length - 1);
+    const operator = operators[index];
+    const question = `${number1} ${operator} ${number2}`;
+    const answer = String(calculate(number1, operator, number2));
+    rounds.push([question, answer]);
   }
-  makeGame(description, rounds);
+  runEngine(description, rounds);
 };
 export default startGame;

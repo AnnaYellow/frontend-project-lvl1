@@ -1,37 +1,29 @@
-import makeGame from '../index.js';
-import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
+import runEngine from '../index.js';
+import getRandomNumber from '../utils.js';
+import numberOfGameRounds from '../constants.js';
 
-const getDevisorsArray = (number) => {
-  const result = [];
-  for (let i = 1; i <= number; i += 1) {
-    if ((number % i) === 0) {
-      result.push(i);
-    }
-  }
-  return result;
-};
+const description = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (firstNumber, secondNumber) => {
-  const firstNumberDevisorsArray = getDevisorsArray(firstNumber);
-  const secondNumberDevisorsArray = getDevisorsArray(secondNumber);
-  let result = firstNumberDevisorsArray.length - 1;
-  while (!secondNumberDevisorsArray.includes(firstNumberDevisorsArray[result])) {
-    result -= 1;
+const getGCD = (number1, number2) => {
+  if (number1 === number2) {
+    return number1;
   }
-  return firstNumberDevisorsArray[result];
+  if (number1 > number2) {
+    return getGCD(number2, number1 - number2);
+  }
+  return getGCD(number1, number2 - number1);
 };
 
 const startGame = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
   const rounds = [];
   for (let i = 0; i < numberOfGameRounds; i += 1) {
-    const firstNumber = getRandomNumber(0, 100);
-    const secondNumber = getRandomNumber(0, 100);
-    const question = `${firstNumber} ${secondNumber}`;
-    const wrightAnswerNumber = getGCD(firstNumber, secondNumber);
-    const wrightAnswer = String(wrightAnswerNumber);
-    makeRoundsArray(rounds, question, wrightAnswer);
+    const number1 = getRandomNumber(0, 100);
+    const number2 = getRandomNumber(0, 100);
+    const question = `${number1} ${number2}`;
+    const resultNumber = getGCD(number1, number2);
+    const answer = String(resultNumber);
+    rounds.push([question, answer]);
   }
-  makeGame(description, rounds);
+  runEngine(description, rounds);
 };
 export default startGame;

@@ -1,30 +1,32 @@
-import makeGame from '../index.js';
-import { getRandomNumber, numberOfGameRounds, makeRoundsArray } from '../utils.js';
+import runEngine from '../index.js';
+import getRandomNumber from '../utils.js';
+import numberOfGameRounds from '../constants.js';
 
-const getRandomArithmeticProgression = (lengthFrom, lengthTo) => {
+const description = 'What number is missing in the progression?';
+
+const getProgression = (start, difference, lengthFrom, lengthTo) => {
   const progressionLenth = getRandomNumber(lengthFrom, lengthTo);
-  const progressionDifference = getRandomNumber(0, 10);
-  const progressionStart = getRandomNumber(0, 10);
   const result = [];
-  let n = progressionStart;
+  let n = start;
   while (result.length <= progressionLenth) {
     result.push(n);
-    n += progressionDifference;
+    n += difference;
   }
   return result;
 };
 
 const startGame = () => {
-  const description = 'What number is missing in the progression?';
   const rounds = [];
   for (let i = 0; i < numberOfGameRounds; i += 1) {
-    const progression = getRandomArithmeticProgression(5, 10);
+    const progressionStart = getRandomNumber(0, 10);
+    const progressionDifference = getRandomNumber(0, 10);
+    const progression = getProgression(progressionStart, progressionDifference, 5, 10);
     const missingNumberIndex = getRandomNumber(0, progression.length - 1);
-    const wrightAnswer = String(progression[missingNumberIndex]);
+    const answer = String(progression[missingNumberIndex]);
     progression[missingNumberIndex] = '..';
     const question = progression.join(' ');
-    makeRoundsArray(rounds, question, wrightAnswer);
+    rounds.push([question, answer]);
   }
-  makeGame(description, rounds);
+  runEngine(description, rounds);
 };
 export default startGame;
