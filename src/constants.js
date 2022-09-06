@@ -1,2 +1,2 @@
-const numberOfGameRounds = 3;
-export default numberOfGameRounds;
+const roundsCount = 3;
+export default roundsCount;
