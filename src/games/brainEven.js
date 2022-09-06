@@ -11,6 +11,7 @@ const generateRound = () => {
   const question = getRandomNumber(1, 100);
   const answer = isEven(question) ? 'yes' : 'no';
   result.push(question, answer);
+  return result;
 };
 
 const startGame = () => {
