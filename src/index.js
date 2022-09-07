@@ -14,7 +14,8 @@ const runEngine = (description, rounds) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
-    } console.log('Correct!');
+    }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
 };

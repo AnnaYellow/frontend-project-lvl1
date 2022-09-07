@@ -16,12 +16,16 @@ const isPrime = (number) => {
   return true;
 };
 
+const generateRound = () => {
+  const question = getRandomNumber(0, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [question, answer];
+};
+
 const startGame = () => {
   const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const question = getRandomNumber(0, 100);
-    const answer = isPrime(question) ? 'yes' : 'no';
-    rounds.push([question, answer]);
+    rounds.push(generateRound());
   }
   runEngine(description, rounds);
 };

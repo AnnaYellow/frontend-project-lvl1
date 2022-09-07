@@ -13,7 +13,6 @@ const getProgression = (start, step, length) => {
 };
 
 const generateRound = () => {
-  const result = [];
   const progressionStart = getRandomNumber(0, 10);
   const progressionStep = getRandomNumber(0, 10);
   const progressionLength = getRandomNumber(5, 10);
@@ -22,8 +21,7 @@ const generateRound = () => {
   const answer = String(progression[hiddenIndex]);
   progression[hiddenIndex] = '..';
   const question = progression.join(' ');
-  result.push(question, answer);
-  return result;
+  return [question, answer];
 };
 
 const startGame = () => {

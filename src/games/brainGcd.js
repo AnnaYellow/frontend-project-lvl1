@@ -14,14 +14,18 @@ const getGCD = (number1, number2) => {
   return number1;
 };
 
+const generateRound = () => {
+  const number1 = getRandomNumber(0, 100);
+  const number2 = getRandomNumber(0, 100);
+  const question = `${number1} ${number2}`;
+  const answer = String(getGCD(number1, number2));
+  return [question, answer];
+};
+
 const startGame = () => {
   const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const number1 = getRandomNumber(0, 100);
-    const number2 = getRandomNumber(0, 100);
-    const question = `${number1} ${number2}`;
-    const answer = String(getGCD(number1, number2));
-    rounds.push([question, answer]);
+    rounds.push(generateRound());
   }
   runEngine(description, rounds);
 };
